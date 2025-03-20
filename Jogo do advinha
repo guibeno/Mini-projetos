@@ -1,0 +1,14 @@
+import random
+def jogo(numero,numero_secreto):
+    while numero != numero_secreto:
+        if numero > numero_secreto:
+            print('Numero MENOR que o secreto')
+        elif numero < numero_secreto:
+            print('Numero MAIOR que o secreto')
+        numero = int(input('Adivinhe o número: '))
+    print('Parabéns você adivinhou o número secreto: {}'.format(numero))
+
+
+numero_secreto = random.randint(1, 1000)
+numero = int(input('Adivinhe o número: '))
+jogo(numero,numero_secreto)
