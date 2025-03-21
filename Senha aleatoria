@@ -1,0 +1,24 @@
+import random
+contador = 0
+lista_caracteres = []
+lista_letras = 'qertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+lista_caracteres_especiais = '!@#$%¨&)*('
+senha = []
+def gerador_senha(caracter,numeros,letras,contador,lista_caracteres):
+    for i in range(numeros):
+        lista_caracteres.append(random.randint(0,9))
+    for x in range(letras):
+        lista_caracteres.append(random.choice(lista_letras))
+    for y in range(caracter):
+        lista_caracteres.append(random.choice(lista_caracteres_especiais))
+    random.shuffle(lista_caracteres)
+    senha = ''.join(str(c) for c in lista_caracteres)
+    print(f'senha gerada com sucesso: ',senha)
+
+
+
+
+letras = int(input('Quantas letras?: '))
+numeros = int(input('Quantos numeros?: '))
+caracter = int(input('Qual caracteres especiais?: '))
+gerador_senha(caracter,numeros,letras,contador,lista_caracteres)
