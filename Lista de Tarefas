@@ -1,0 +1,34 @@
+def listar_tarefas():
+    contador = 0
+    for tarefa in lista_tarefas:
+        contador += 1
+        print(f'{contador} - {tarefa}')
+
+def adicionar_tarefas(frase):
+    lista_tarefas.append(frase)
+    print('Tarefa adicionadas com sucesso!')
+    print('-'*50)
+    listar_tarefas()
+    print('-'*50)
+
+
+def apagar_tarefas(numero):
+    lista_tarefas.pop(numero-1)
+    listar_tarefas()
+
+lista_tarefas = []
+resp = 3
+while resp != 0:
+    resp = int(input("Lista de tarefas!\n1 - Adicionar tarefas\n2 - Remover tarefas\n3 - Sair do programa\n"))
+
+    if resp == 1:
+        frase = input("Digite uma sua tarefa:\n")
+        adicionar_tarefas(frase)
+    if resp == 2:
+        listar_tarefas()
+        numero = int(input('Digite o número da tarefa que deseja remover:\n'))
+        apagar_tarefas(numero)
+    if resp == 3:
+        print('Encerrando o programa!')
+        break
+
