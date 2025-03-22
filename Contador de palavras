@@ -1,0 +1,8 @@
+def contador_de_palavras(frase):
+    contador = len(frase.split())
+    print('A frase tem {} palavras.'.format(contador))
+
+
+
+frase = 'O Xis no Ponto é mais do que uma lanchonete, é uma experiência gastronômica inspirada na tradição gaúcha. Nosso xis é preparado com ingredientes frescos, combinações saborosas e aquele toque especial que faz toda a diferença. Seja para um lanche rápido ou para matar a fome de verdade, aqui você encontra qualidade, sabor e um atendimento que faz você se sentir em casa.'
+contador_de_palavras(frase)
